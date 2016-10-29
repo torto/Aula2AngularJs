@@ -16,13 +16,9 @@ module.exports = function(config) {
       'public/bower_components/angular/angular.js',
       'public/bower_components/angular-route/angular-route.js',
       'public/bower_components/angular-mocks/angular-mocks.js',
-      'public/bower_components/jquery/dist/jquery.min.js',
-      'public/bower_components/ngstorage/ngStorage.min.js',
       'public/js/main.js',
-      'public/js/controllers/**/*.js',
-      'public/js/directives/**/*.js',
-      'public/js/directives/**/*.html',
-      'test/spec/**/*Spec.js'
+      'public/js/index/**/*.js',
+      'test/**/*-spec.js'
     ],
     ngHtml2JsPreprocessor: {
       // strip this from the file path
@@ -37,7 +33,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'public/js/directives/**/*.html': 'ng-html2js'
+      'public/js/**/*.html': 'ng-html2js'
     },
 
 
@@ -67,7 +63,8 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // browsers: ['Firefox'],
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

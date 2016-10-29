@@ -4,8 +4,13 @@ angular.module('cruj').service('IndexService', [function(){
     return a + b;
   }
 
+  function multiplicacaoDeDoisValores(a, b){
+    return a * b;
+  }
+
   return {
-    somaDeDoisValores: somaDeDoisValores
+    somaDeDoisValores: somaDeDoisValores,
+    multiplicacaoDeDoisValores: multiplicacaoDeDoisValores
   };
 
 }]);
