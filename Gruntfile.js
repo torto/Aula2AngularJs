@@ -1,21 +1,8 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    less: {
-      development: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "public/css/style.css": "public/css/less/style.less"
-        }
-      }
-    },
     watch: {
       dist: {
         files: ['!public/bower_components/**/*', 'public/**/*', '!public/css/style.css'],
-        tasks: ['less'],
         options: {
           livereload: true,
         }
@@ -62,7 +49,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
